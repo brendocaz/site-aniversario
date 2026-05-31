@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    min-width: 100vh;
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--branco-suave);
     background:
@@ -86,7 +86,7 @@ body{
 .menu-flutuante{
     position: fixed;
     top: 65px;
-    left: 1598px;
+    right: 20px;
     width: 280px;
     padding: 16px;
     border-radius: 18px;
@@ -111,9 +111,6 @@ body{
 .menu-flutuante.ativo{
     transform: translateX(0);
     opacity: 1;
-}
-
-.menu-flutuante.ativo{
     display: flex;
 }
 
@@ -510,3 +507,92 @@ body{
     }
 }
 
+@media (max-width: 1024px){
+    .hero{
+        padding: 80px 28px 70px;
+    }
+
+    .janelas{
+        grid-template-columns: 1fr;
+        max-width: 760px;
+        margin-top: 160px;
+        overflow: visible;
+    }
+
+    .janela,
+    .janela.janela-grande,
+    .janela-pequena.baixo{
+        transform: none;
+    }
+
+    .momento{
+        max-width: 820px;
+        gap: 40px;
+    }
+
+    .foto-card img{
+        border-bottom-width: 70px;
+    }
+
+    .video-card{
+        width: min(90%, 900px);
+    }
+}
+@media (max-width: 768px){
+
+    .text-card{
+        max-width: 280px;
+        padding: 18px;
+        font-size: 15px;
+        line-height: 1.6;
+        justify-self: start;
+    }
+
+}
+
+
+@media (max-width: 425px){
+
+    .titulo-navbar p{
+        font-size: 1px;
+    }
+
+    .bolinhas{
+        gap: 7px;
+    }
+
+    .bolinha{
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .janelas{
+        margin-top: 70px;
+    }
+
+    .conteudo-janela{
+        font-size: 17px;
+    }
+
+    .timeline h2{
+        font-size: 24px;
+    }
+
+    .text-card{
+        max-width: 250px;
+        font-size: 14px;
+    }
+
+    .foto-card img{
+        max-height: 340px;
+        border-bottom-width: 45px;
+    }
+
+    .text-final{
+        font-size: 30px;
+    }
+}
