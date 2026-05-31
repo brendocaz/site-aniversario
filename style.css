@@ -35,52 +35,112 @@ body{
 }
 
 .navbar{
-      height: 44px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 28px;
-      background: rgba(7, 31, 17, 0.48);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
+    height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    background: rgba(7, 31, 17, 0.48);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
 
-    .bolinhas{
-      display: flex;
-      gap: 12px;
-    }
+.bolinhas{
+    display: flex;
+    gap: 12px;
+}
 
-    .bolinha{
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.11);
-      border: 1px solid rgba(232,245,236,0.55);
-      box-shadow: 0 0 12px rgba(107,203,139,0.45);
-    }
+.bolinha{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.11);
+    border: 1px solid rgba(232,245,236,0.55);
+    box-shadow: 0 0 12px rgba(107,203,139,0.45);
+}
 
-    .titulo-navbar{
-      font-size: 20px;
-      letter-spacing: 0.3px;
-      opacity: 0.95;
-    }
+.titulo-navbar{
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    opacity: 0.95;
+}
 
-    .menu{
-      width: 33px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
+.menu{
+    width: 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor:pointer
+}
 
-    .menu span{
-      height: 2px;
-      background: var(--branco-suave);
-      border-radius: 10px;
-    }
+.menu span{
+    height: 2px;
+    background: var(--branco-suave);
+    border-radius: 10px;
+}
+
+.menu-flutuante{
+    position: fixed;
+    top: 65px;
+    left: 1598px;
+    width: 280px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(6, 32, 16, 0.60);
+    border: 1px solid rgba(107,203,139,0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+    z-index: 999;
+
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-flutuante{
+    transform: translateX(120%);
+    opacity: 0;
+    transition: 0.3s ease;
+    display: flex;
+}
+
+.menu-flutuante.ativo{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menu-flutuante.ativo{
+    display: flex;
+}
+
+.menu-flutuante a{
+    color: var(--branco-suave);
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.menu-flutuante a:hover{
+    background:rgba(107,203,139,0.12);
+    transform: translateX(4px);
+}
+
+.menu-flutuante strong{
+    display: block;
+    font-size: 16px;
+}
+
+.menu-flutuante span {
+    display: block;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
 
 .hero{
     min-height: calc(100vh - 44px);
@@ -88,6 +148,7 @@ body{
     position: relative;
     overflow: hidden;
 }
+
 
 .hero::before{
     content: "";
@@ -111,6 +172,7 @@ body{
     font-weight: 800;
     text-shadow: 0 8px 30px rgba(0,0,0,0.35);
     margin-bottom: 70px;
+    padding: 3rem;
 }
 
 .btn-contexto {
@@ -143,7 +205,7 @@ body{
     gap: 34px;
     color: #101010;
     overflow: hidden;
-    margin-top: 315px
+    margin-top: 23.3rem;
 }
 
 .janela{
@@ -227,6 +289,7 @@ body{
     text-align: center;
     font-size: clamp(25px, 5vw, 45px);
     margin-bottom: 70px;
+    margin-top: 12rem;
 }
 
 .linha-central{
@@ -388,24 +451,24 @@ body{
     position: relative;
     z-index: 5;
 
-    width: 100%;
+    width: min(100%, 1200px);
     margin: 0 auto 35px;
     border-radius: 18px;
     overflow: hidden;
-    background: rgba(255,255,255,0.08);
+    background: transparent;
     border: 1px solid rgba(232,245,236,0.18);
     box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
 
 .video-card video{
-    width: 100%;
-    display: block;
+    width: min(100%, 1200px);
     border-radius: 18px;
-    z-index: 5;
+    display: block;
 }
 
-.audio-escondido,
+
+.audio-pra-ouvir,
 .btn-recomecar{
     display: block;
     width: fit-content;

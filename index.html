@@ -23,8 +23,29 @@
         <span></span>
       </div>
     </header>
+    <nav class="menu-flutuante" id="menuFlutuante">
+      <a href="#fotos">
+        <strong>📷 galeria</strong>
+        <span>fotos e momentos</span>
+      </a>
 
-    <section id="incio" class="hero">
+      <a href="#audio">
+        <strong>🎧 áudio escondido</strong>
+        <span>ouça quando estiver sozinha</span>
+      </a>
+
+      <a href="https://open.spotify.com/playlist/2aXiT50oxuRrRIuK52TbtL?si=03c895f96eb149e9" target="_blank">
+        <strong> playlist </strong>
+        <span>algumas músicas que me lembram você</span>
+      </a>
+
+      <a href="#inicio">
+        <strong>↻ recomeçar</strong>
+        <span>voltar ao início</span>
+      </a>
+    </nav>
+
+    <section id="inicio" class="hero">
       <h1 class="hidden">Hello gay!<br>Feliz aniversário</h1>
 
       <a href="#contexto" class="btn-contexto hidden">contexto</a>
@@ -95,7 +116,7 @@
     </div>
   </section>
 
-    <section class="timeline">
+  <section class="timeline" id="fotos">
       <h2 class="hidden">Acompanhe a história de como eu fiquei extremamente BOIOLA por você</h2>
       <div class="linha-central"></div>
 
@@ -105,7 +126,7 @@
       </div>
 
       <div class="momento hidden">
-        <div class="text-card">Depois se aproximou DEMAIS, eai meu lado homossexual começou a ser despertado de maneira imprevisível. Tipo: "Acho que da menina que vive me chamando de gat >:C" </div>
+        <div class="text-card">Depois, a gente se aproximou DEMAIS, eai meu lado homossexual começou a ser despertado de maneira imprevisível. Tipo: "Acho que da menina que vive me chamando de gat >:C" </div>
         <div class="foto-card"><img src="./FOTOS/img1.jpg" alt=""></div>
         
       </div>
@@ -123,7 +144,7 @@
 
       <div class="momento hidden">
         <div class="foto-card"><img src="./FOTOS/img11.jpg" alt=""></div>
-        <div class="text-card"> Eai chegou o dia do Saber, que resolvi te deixar da cor do seu cabelo(é que agora você não ta com ele mais vermelho, mas eu acho que cê lembra mt bem desse diaKKKKK)</div>
+        <div class="text-card"> Eai chegou o dia do Saber, que resolvi te deixar da cor do seu cabelo (é que agora você não ta com ele mais vermelho, mas eu acho que cê lembra mt bem desse diaKKKKK)</div>
       </div>
 
       <div class="momento hidden">
@@ -144,18 +165,19 @@
 
       <div class="momento hidden">
         <div class="foto-card"><img src="./FOTOS/img15.jpg" alt=""></div>
-        <div class="text-card">Você é surreal, marcante p caralho! Você anima QUALQUER ambiente. Dos mais insalubres podres, até o canaã</div>
+        <div class="text-card">Você é surreal, marcante p caralho! Você anima QUALQUER ambiente. Dos mais insalubres podres, até o canaã (inacreditávelm isso, namoral)
+        </div>
       </div>
 
       <div class="momento hidden">
-        <div class="text-card">Eu me perco no seu olhar, na sua boca, no seu corpo, EM VOCÊ!! <br>cê me quebra demais mulher, chega me assustar, e eu acho que foi por isso que eu me afastei por um tempo. Mas quando eu te vi naquele dia que eu tava correndo pra psicóloga, eu travei, e até parece clichê, mas tudo tava lento e minha maior vontade foi ter ficado ali contigo.</div>
+        <div class="text-card">O jeito que você me quebra é simplesmente surreal pra mim. <br>E eu acho que o dia que o pico mais alto da minha homossexualidade foi o dia que a gente se trombou depois de muito tempo sem se falar, eai quando eu te vi naquele dia, eu travei, e até parece clichê, mas tudo tava lento e minha maior vontade foi ter ficado ali contigo.</div>
         <div class="foto-card"><img src="./FOTOS/img14.jpg" alt=""></div>
         
       </div>
 
       <div class="momento hidden">
         <div class="foto-card"><img src="./FOTOS/img4.jpg" alt=""></div>
-        <div class="text-card">Você é surreal, e extremamente importante e especial pra mim! <br>EeeeeEE, ainda não acabou! vai rolando pra baixo ai que tem mais viadagem (esse ano eu caprichei). </div>
+        <div class="text-card"> Você apesar de gay (e de me deixar muito gay), ainda é muito importante e especial pra mim! <br>EeeeeEE, ainda não acabou! vai rolando pra baixo ai que tem mais viadagem (esse ano eu caprichei). </div>
       </div>
 
       <div class="momento hidden">
@@ -177,32 +199,23 @@
       </p>
 
       <div class="video-card">
-        <video contols>
+        <video controls>
           <source src="./FOTOS/tipotipo.mp4" type="video/mp4">
           Seu navegador não suporta o vídeo
         </video>
       </div>
 
-      <button class="audio-escondido">
+      <button class="audio-pra-ouvir" id="audio">
         🎧 ouça quando estiver sozinha ✨
       </button>
 
-      <a href="#incio" class="btn-recomecar">
+      <a href="#inicio" class="btn-recomecar">
         ↻ recomeçar tudo
       </a>
     </section>
   </main>
 </body>
-<script> 
-  const elementos = document.querySelectorAll('.hidden');
+<script src="script.js"></script>
+ 
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.16 });
-
-    elementos.forEach((el) => observer.observe(el));</script>
 </html>
